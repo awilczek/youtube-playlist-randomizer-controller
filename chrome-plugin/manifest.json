@@ -1,0 +1,16 @@
+{
+    "name": "youtube-playlist-randomizer-controller",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["http://youtube-playlist-randomizer.valami.info/*"],
+            "js": ["script.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "http://localhost/*",
+        "http://youtube-playlist-randomizer.valami.info/"
+    ]
+}
