@@ -2,7 +2,7 @@
 Scripts allow controlling your http://youtube-playlist-randomizer.valami.info page from your phone!
 
 # Descripion
-First app is a simple node app which receives commands from your phone and remember it for a while. It also tells the second script what to do when it asks.
+First app is a simple node app which receives commands from your phone and remember them for a while. It also tells the second script what to do when it asks.
 
 Second one is a simple chrome extension that starts up only on http://youtube-playlist-randomizer.valami.info pages. It is asking questions to the first one and, whenever you want, literally clicks on 'Play next' and 'Play previous' buttons on the page.
 
