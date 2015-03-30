@@ -1,8 +1,15 @@
 # youtube-playlist-randomizer-controller
-Scripts allow controlling your youtube-playlist-randomizer.info page from your Android phone!
+Scripts allow controlling your http://youtube-playlist-randomizer.valami.info page from your Android phone!
+
+# Descripion
+First app is a simple node app which receives commands from your phone and remember it for a while. It also tells the second script what to do when it asks.
+
+Second one is a simple chrome extension that starts up only on http://youtube-playlist-randomizer.valami.info pages. It is asking questions to the first one and, whenever you want, literally clicks on 'Play next' and 'Play previous' buttons on the page.
+
+![screenshot](screenshot.png)
 
 # Requirements
-- node.js installed
+- [node.js](https://nodejs.org) installed
 
 # Installation
 1. run 'node /path/to/server/server.js' (ideally, add to startup apps)
@@ -12,6 +19,6 @@ Scripts allow controlling your youtube-playlist-randomizer.info page from your A
 - enable developer mode
 - click 'load extension without packet'
 - point to /path/to/chrome-plugin directory and clik 'open'
-4. open your youtube-playlist-randomizer.info page
+4. open your http://youtube-playlist-randomizer.valami.info page
 4. install [REST Client for Android](https://play.google.com/store/apps/details?id=com.sourcestream.android.restclient)
 5. enjoy! by sending POST (next) or PUT (prev) to your computer's IP on port 9995
