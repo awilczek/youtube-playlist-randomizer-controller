@@ -1,22 +1,31 @@
 var express = require("express");
+var when    = require("when");
 var app     = express();
 
 var next = false;
 var prev = false;
+var currentSong = "";
+var nextSong    = "";
 
 app.get("/", function(req, res) {
-    res.json({ next: next, prev: prev });
+    currentSong = req.query.title || currentSong;
+    nextSong    = (req.query.next && req.query.next.replace(/Next: /, ""))  || nextSong;
+
+    res.json({
+        next:  next, prev:  prev,
+        currentSong: currentSong,
+        nextSong:    nextSong
+    });
+
     next = prev = false;
 });
 
 app.post("/", function(req, res) {
-    console.log("next");
     next = true;
-    res.end();
+    res.send(nextSong);
 });
 
 app.put("/", function(req, res) {
-    console.log("prev");
     prev = true;
     res.end();
 });
